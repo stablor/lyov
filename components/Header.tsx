@@ -6,8 +6,8 @@ import styles from "./Header.module.css";
 
 const NAV_LINKS = [
   { label: "Le Concept",   id: "concept"     },
-  { label: "Ingrédients",  id: "ingredients" },
-  { label: "Engagement",   id: "engagement"  },
+  { label: "Bien-faits",  id: "ingredients" },
+  { label: "Engagement",   id: "eco"         },
 ] as const;
 
 function scrollToSection(id: string) {
@@ -84,7 +84,7 @@ export default function Header() {
         <div className={styles.right}>
           <button
             className={styles.cta}
-            onClick={() => scrollToSection("stockists")}
+            onClick={() => scrollToSection("commander")}
           >
             Où nous trouver&nbsp;?
           </button>
@@ -127,7 +127,7 @@ export default function Header() {
             ))}
             <button
               className={styles.ctaMobile}
-              onClick={() => handleNav("stockists")}
+              onClick={() => handleNav("commander")}
             >
               Où nous trouver&nbsp;?
             </button>

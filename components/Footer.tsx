@@ -92,7 +92,7 @@ function FlagFR() {
 
 const NAV_EXPLORE = [
   { label: "Le Concept",        id: "concept"      },
-  { label: "Ingrédients",       id: "ingredients"  },
+  { label: "Bien-faits",       id: "ingredients"  },
   { label: "Notre Engagement",  id: "eco"          },
   { label: "Boutique",          id: "boutique"     },
 ] as const;
@@ -129,7 +129,7 @@ export default function Footer() {
   return (
     <>
       {/* ── Pre-footer CTA ─────────────────────────────────────────────────── */}
-      <section className={styles.preCta} aria-labelledby="cta-heading">
+      <section id="commander" className={styles.preCta} aria-labelledby="cta-heading">
         <div className={styles.preCtaInner}>
 
           <p className={styles.preCtaEyebrow}>Rejoignez le mouvement</p>
@@ -139,7 +139,7 @@ export default function Footer() {
           </h2>
 
           {/* Magnetic CTA button — x/y are MotionValues from useSpring */}
-          <motion.button
+          {/* <motion.button
             className={styles.ctaMain}
             style={{ x: magnetic.x, y: magnetic.y }}
             onMouseMove={magnetic.onMouseMove}
@@ -147,20 +147,20 @@ export default function Footer() {
             whileTap={{ scale: 0.97 }}
           >
             Commander mon pack découverte
-          </motion.button>
+          </motion.button> */}
 
           {/* Newsletter opt-in */}
           <div className={styles.newsletter}>
             <p className={styles.newsletterHint}>
               Rejoignez la révolution Lyov.{" "}
-              <span className={styles.newsletterAccent}>
+              {/* <span className={styles.newsletterAccent}>
                 −10% sur votre première commande.
-              </span>
+              </span> */}
             </p>
 
             {subscribed ? (
               <p className={styles.newsletterSuccess} role="status">
-                Merci&nbsp;! Votre code promo arrive dans quelques secondes.
+                Merci&nbsp;!
               </p>
             ) : (
               <form onSubmit={handleSubmit} className={styles.newsletterForm}>

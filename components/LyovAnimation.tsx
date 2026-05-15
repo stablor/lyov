@@ -179,7 +179,7 @@ export default function LyovAnimation() {
   // ── Render ─────────────────────────────────────────────────────────────────
 
   return (
-    <div ref={containerRef} className={styles.container}>
+    <div ref={containerRef} id="concept" className={styles.container}>
       <div className={styles.sticky}>
 
         {/* ── Canvas with radial vignette ── */}
