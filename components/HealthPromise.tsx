@@ -54,7 +54,7 @@ export default function HealthPromise() {
   // Scroll progress over the full timeline height
   const { scrollYProgress } = useScroll({
     target: timelineRef,
-    offset: ["start 0.85", "end 0.65"],
+    offset: ["start 0.85", "end 0.15"],
   });
 
   // Spring-smoothed scale for the line draw (high stiffness = low lag)

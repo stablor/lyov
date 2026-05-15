@@ -162,8 +162,9 @@ export default function LyovAnimation() {
 
       const img = imagesRef.current[index];
       if (img?.complete && img.naturalWidth > 0) {
-        // object-fit: cover — image fills the viewport, edges clipped
-        const scale = Math.max(w / img.naturalWidth, h / img.naturalHeight);
+        const cover = Math.max(w / img.naturalWidth, h / img.naturalHeight);
+        // Mobile portrait: zoom out 38% so side packages stay in frame
+        const scale = w <= 640 ? cover * 0.62 : cover;
         const dw    = img.naturalWidth  * scale;
         const dh    = img.naturalHeight * scale;
         ctx.drawImage(img, (w - dw) / 2, (h - dh) / 2, dw, dh);
