@@ -1,0 +1,411 @@
+/* ── Pre-footer CTA ───────────────────────────────────────────────────────── */
+
+.preCta {
+  background-color: #160e06;
+  padding: 7rem 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.preCtaInner {
+  max-width: 680px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.25rem;
+  text-align: center;
+}
+
+.preCtaEyebrow {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: rgba(245, 240, 228, 0.35);
+}
+
+.preCtaTitle {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  color: rgba(245, 240, 228, 0.96);
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+
+/* ── Magnetic CTA ─────────────────────────────────────────────────────────── */
+
+.ctaMain {
+  font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  font-size: 0.70rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(22, 14, 6, 0.90);
+  background-color: rgba(245, 240, 228, 0.96);
+  border: none;
+  border-radius: 9999px;
+  padding: 18px 52px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.ctaMain:hover {
+  background-color: #ffffff;
+}
+
+/* ── Newsletter ───────────────────────────────────────────────────────────── */
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  width: 100%;
+  max-width: 460px;
+}
+
+.newsletterHint {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  font-size: 0.70rem;
+  color: rgba(245, 240, 228, 0.46);
+  letter-spacing: 0.06em;
+  line-height: 1.65;
+}
+
+.newsletterAccent {
+  color: rgba(245, 240, 228, 0.78);
+  font-weight: 500;
+}
+
+.newsletterForm {
+  display: flex;
+  width: 100%;
+  border: 0.5px solid rgba(245, 240, 228, 0.18);
+  border-radius: 9999px;
+  overflow: hidden;
+  background-color: rgba(245, 240, 228, 0.05);
+}
+
+.newsletterInput {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 13px 22px;
+  font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  font-size: 0.78rem;
+  color: rgba(245, 240, 228, 0.88);
+  letter-spacing: 0.04em;
+}
+
+.newsletterInput::placeholder {
+  color: rgba(245, 240, 228, 0.28);
+}
+
+.newsletterSubmit {
+  flex-shrink: 0;
+  background-color: rgba(245, 240, 228, 0.10);
+  border: none;
+  border-left: 0.5px solid rgba(245, 240, 228, 0.14);
+  padding: 13px 26px;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  font-size: 0.60rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(245, 240, 228, 0.65);
+  transition:
+    background-color 0.2s ease,
+    color            0.2s ease;
+}
+
+.newsletterSubmit:hover {
+  background-color: rgba(245, 240, 228, 0.20);
+  color: rgba(245, 240, 228, 0.90);
+}
+
+.newsletterSuccess {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  font-size: 0.72rem;
+  color: rgba(245, 240, 228, 0.58);
+  letter-spacing: 0.08em;
+}
+
+/* ── Footer shell ─────────────────────────────────────────────────────────── */
+
+.footer {
+  background-color: #ede9d5;
+  position: relative;
+}
+
+.footerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 5% 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* ── 4-column grid ────────────────────────────────────────────────────────── */
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ── Col 1 — Brand ────────────────────────────────────────────────────────── */
+
+.colBrand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footerLogo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.6rem;
+  color: rgba(22, 14, 6, 0.90);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.footerTagline {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  font-size: 0.72rem;
+  color: rgba(22, 14, 6, 0.46);
+  letter-spacing: 0.06em;
+  line-height: 1.68;
+  max-width: 28ch;
+}
+
+.socials {
+  display: flex;
+  gap: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(22, 14, 6, 0.38);
+  transition: color 0.22s ease;
+}
+
+.socialLink:hover {
+  color: rgba(22, 14, 6, 0.82);
+}
+
+/* ── Col title ────────────────────────────────────────────────────────────── */
+
+.colTitle {
+  margin: 0 0 1.25rem;
+  font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  font-size: 0.57rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(22, 14, 6, 0.34);
+}
+
+/* ── Nav cols ─────────────────────────────────────────────────────────────── */
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.navLink {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  font-size: 0.78rem;
+  color: rgba(22, 14, 6, 0.55);
+  letter-spacing: 0.04em;
+  text-align: left;
+  position: relative;
+  transition: color 0.22s ease;
+}
+
+/* Underline draws in from left, wipes out to right */
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 0.5px;
+  background-color: rgba(22, 14, 6, 0.48);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.navLink:hover {
+  color: rgba(22, 14, 6, 0.88);
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ── Col 4 — Certification ────────────────────────────────────────────────── */
+
+.certCard {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem 1.25rem;
+  background-color: rgba(22, 14, 6, 0.04);
+  border: 0.5px solid rgba(22, 14, 6, 0.08);
+  border-radius: 10px;
+}
+
+.certName {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: rgba(22, 14, 6, 0.78);
+}
+
+.certSub {
+  margin: 0.2rem 0 0;
+  font-family: system-ui, sans-serif;
+  font-size: 0.57rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(22, 14, 6, 0.38);
+}
+
+/* ── Trust badges ─────────────────────────────────────────────────────────── */
+
+.trustRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1.5rem 0;
+  border-top: 0.5px solid rgba(22, 14, 6, 0.08);
+  border-bottom: 0.5px solid rgba(22, 14, 6, 0.08);
+}
+
+.trustBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: rgba(22, 14, 6, 0.38);
+}
+
+.trustLabel {
+  font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(22, 14, 6, 0.38);
+}
+
+/* ── Bottom bar ───────────────────────────────────────────────────────────── */
+
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 0.60rem;
+  color: rgba(22, 14, 6, 0.28);
+  letter-spacing: 0.08em;
+}
+
+.madeWith {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 0.62rem;
+  color: rgba(22, 14, 6, 0.25);
+  letter-spacing: 0.04em;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .preCta {
+    padding: 5rem 6%;
+  }
+
+  .ctaMain {
+    width: 100%;
+    padding: 17px 32px;
+  }
+
+  .newsletterForm {
+    flex-direction: column;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .newsletterSubmit {
+    border-left: none;
+    border-top: 0.5px solid rgba(245, 240, 228, 0.14);
+    padding: 14px;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .trustRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.1rem;
+    padding: 1.75rem 0;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
