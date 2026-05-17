@@ -29,7 +29,7 @@
   font-family: Georgia, "Times New Roman", serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 0.78rem;
+  font-size: 1.25rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: rgba(22, 14, 6, 0.32);
@@ -65,14 +65,20 @@
 }
 
 /* Z-index stacking: card 0 (bottom) → card 2 (top) */
-.z1 { z-index: 1; }
-.z2 { z-index: 2; }
-.z3 { z-index: 3; }
+.z1 {
+  z-index: 1;
+}
+.z2 {
+  z-index: 2;
+}
+.z3 {
+  z-index: 3;
+}
 
 /* ── Card visual (left column) ────────────────────────────────────────────── */
 
 .cardVisual {
-  position: relative;           /* required by next/image fill */
+  position: relative; /* required by next/image fill */
   overflow: hidden;
   background-color: rgba(22, 14, 6, 0.022);
   border-right: 0.5px solid rgba(0, 0, 0, 0.04);
@@ -101,7 +107,11 @@
 }
 
 .cardTag {
-  font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Helvetica Neue",
+    sans-serif;
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.28em;
@@ -122,7 +132,11 @@
 
 .cardBody {
   margin: 0;
-  font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Helvetica Neue",
+    sans-serif;
   font-size: 0.94rem;
   color: rgba(60, 45, 28, 0.65);
   line-height: 1.78;
@@ -133,8 +147,12 @@
 .cardBadge {
   margin-top: 0.25rem;
   display: inline-block;
-  font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
-  font-size: 0.70rem;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;

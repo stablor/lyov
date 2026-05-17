@@ -71,6 +71,9 @@ export default function LyovAnimation() {
     offset: ["start start", "end end"],
   });
 
+  // Page-level scrollY — drives scroll indicator fade
+  const { scrollY } = useScroll();
+
   const spring = useSpring(scrollYProgress, {
     stiffness: 100,
     damping:   30,
@@ -92,6 +95,9 @@ export default function LyovAnimation() {
 
   // Dot appears just as lines complete their trace
   const dotOpacity    = useTransform(spring, [DOT_IN_START, DRAW_END], [0, 1]);
+
+  // Scroll indicator fades out as soon as user scrolls
+  const indicatorOpacity = useTransform(scrollY, [0, 60], [1, 0]);
 
   // ── Loader bar progress (imperative CSS var update — avoids inline style lint) ─
 
@@ -163,11 +169,13 @@ export default function LyovAnimation() {
       const img = imagesRef.current[index];
       if (img?.complete && img.naturalWidth > 0) {
         const cover = Math.max(w / img.naturalWidth, h / img.naturalHeight);
-        // Mobile portrait: zoom out 38% so side packages stay in frame
+        // Mobile portrait: zoom out so side packages stay in frame
         const scale = w <= 640 ? cover * 0.62 : cover;
         const dw    = img.naturalWidth  * scale;
         const dh    = img.naturalHeight * scale;
-        ctx.drawImage(img, (w - dw) / 2, (h - dh) / 2, dw, dh);
+        // Mobile: flush to top — no beige gap above the product
+        const dy    = w <= 640 ? 0 : (h - dh) / 2;
+        ctx.drawImage(img, (w - dw) / 2, dy, dw, dh);
       }
 
       rafRef.current = requestAnimationFrame(render);
@@ -268,6 +276,31 @@ export default function LyovAnimation() {
             </div>
           ))}
         </motion.div>
+
+        {/* ── Scroll indicator ── */}
+        {ready && (
+          <div className={styles.scrollIndicatorOuter}>
+            <motion.div
+              className={styles.scrollIndicator}
+              style={{ opacity: indicatorOpacity }}
+            >
+              <p className={styles.scrollText}>Scrollez pour croquer</p>
+              <div className={styles.scrollLine}>
+                <motion.div
+                  className={styles.scrollDot}
+                  animate={{ y: [0, 26, 26] }}
+                  transition={{
+                    duration: 1.5,
+                    times: [0, 0.65, 1],
+                    repeat: Infinity,
+                    repeatDelay: 0.4,
+                    ease: "easeIn",
+                  }}
+                />
+              </div>
+            </motion.div>
+          </div>
+        )}
 
         {/* ── Loading screen ── */}
         {!ready && (
