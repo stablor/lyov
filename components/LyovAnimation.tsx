@@ -168,14 +168,10 @@ export default function LyovAnimation() {
 
       const img = imagesRef.current[index];
       if (img?.complete && img.naturalWidth > 0) {
-        const cover = Math.max(w / img.naturalWidth, h / img.naturalHeight);
-        // Mobile portrait: zoom out so side packages stay in frame
-        const scale = w <= 640 ? cover * 0.62 : cover;
+        const scale = Math.max(w / img.naturalWidth, h / img.naturalHeight);
         const dw    = img.naturalWidth  * scale;
         const dh    = img.naturalHeight * scale;
-        // Mobile: flush to top — no beige gap above the product
-        const dy    = w <= 640 ? 0 : (h - dh) / 2;
-        ctx.drawImage(img, (w - dw) / 2, dy, dw, dh);
+        ctx.drawImage(img, (w - dw) / 2, (h - dh) / 2, dw, dh);
       }
 
       rafRef.current = requestAnimationFrame(render);

@@ -261,4 +261,14 @@
   .mobileLabels {
     display: flex;
   }
+
+  /* Scroll indicator — smaller on mobile */
+  .scrollText {
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+  }
+
+  .scrollLine {
+    height: 22px;
+  }
 }
