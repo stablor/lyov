@@ -161,7 +161,7 @@
   border: 0.5px solid rgba(255, 255, 255, 0.35);
   border-radius: 12px;
   padding: 11px 14px;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .mobileLabelTitle {
@@ -177,13 +177,75 @@
 
 .mobileLabelBody {
   margin: 0.35rem 0 0;
-  font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Helvetica Neue",
+    sans-serif;
   font-size: 0.58rem;
   font-weight: 400;
   letter-spacing: 0.13em;
   text-transform: uppercase;
   color: rgba(60, 45, 28, 0.72);
   line-height: 1.5;
+}
+
+/* ── Scroll indicator ────────────────────────────────────────────────────── */
+
+.scrollIndicatorOuter {
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  user-select: none;
+  z-index: 20;
+}
+
+.scrollIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.scrollText {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
+  white-space: nowrap;
+  text-shadow:
+    0 1px 6px rgba(0, 0, 0, 0.35),
+    0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.scrollLine {
+  position: relative;
+  width: 1px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.scrollDot {
+  position: absolute;
+  top: 0;
+  left: -1px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
 
 /* ── Responsive ───────────────────────────────────────────────────────────── */
